@@ -1,0 +1,55 @@
+# ============================================================================
+# .gitignore —— 摄像头实时换衣原型（Python 项目）
+# 注意：assets/ 下的素材（*.png / refs 图 / 姿态模型）是**必须入库**的资源，
+#       本文件不会排除它们，排除的只有运行时生成的临时/调试产物。
+# ============================================================================
+
+# ---- Python 编译与打包产物 ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---- 虚拟环境（体积大，按 requirements.txt 重建即可）----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- 运行时生成的调试截图 / 证据图（由 --selftest 等生成）----
+selftest_contact_sheet.jpg
+upload_selftest_sheet.jpg
+upload_result.jpg
+preview.jpg
+
+# ---- 截图 / 录屏目录与视频文件 ----
+screenshots/
+captures/
+recordings/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.webm
+
+# ---- 上传样图模块的临时存储（session 中间产物，可随时删）----
+assets/uploads/
+
+# ---- IDE / 编辑器 / 系统临时文件 ----
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 日志 ----
+*.log

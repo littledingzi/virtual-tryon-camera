@@ -1,0 +1,16 @@
+# 摄像头实时换衣原型 —— 依赖（纯 CPU，不需要 GPU）
+#
+# 安装（建议用国内镜像，mediapipe+opencv 体积较大）：
+#   pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+#
+# 说明：
+#  * mediapipe 会自带 opencv-contrib-python，所以这里只写 contrib 版，
+#    不要再额外装 opencv-python，两者同装会互相覆盖 cv2 的文件。
+#  * mediapipe 1.x 已移除 mp.solutions API，改用 Tasks API，
+#    首次运行 main.py 会自动下载 assets/pose_landmarker_lite.task（约 5.8MB）。
+#    若无法联网，可改装自带模型的老版本：pip install "mediapipe==0.10.35"
+#  * 本项目已在 Python 3.14.6 + mediapipe 1.1.1 + opencv 5.0.0 上实测跑通。
+
+mediapipe>=1.0.0
+opencv-contrib-python>=4.8.0
+numpy>=1.24
